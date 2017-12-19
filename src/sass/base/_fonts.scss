@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'GothamPro-reg';
+    src: url('/dist/fonts/GothamPro-reg.woff2') format('woff2'),
+         url('/dist/fonts/GothamPro-reg.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@mixin GothamPro-reg {
+    font-family: GothamPro-reg, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+@mixin fontStyle($fz,$lh,$ls) {
+    //font-size: $fz * 1px;
+    font-size: ($fz / 10) *1rem;
+    //line-height: $lh * 1px;
+    line-height: ($lh / 10) *1rem;
+    letter-spacing: $ls *1px;
+}

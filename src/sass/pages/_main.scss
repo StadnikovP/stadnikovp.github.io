@@ -1,0 +1,132 @@
+/* ==========================================================================
+                main page STYLES
+   ========================================================================== */
+.main-container{
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.task-wrapper{
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+
+  .term{
+    width: 30px;
+    text-align: center;
+    border: 0;
+    cursor: default;
+    padding: 5px 0;
+    border-radius: 5px;
+    margin: 0 5px;
+    font-size: 25px;
+
+    &.error{
+      background: sandybrown;
+    }
+  }
+
+  span{
+    font-size: 25px;
+  }
+
+  .answer{
+    width: 40px;
+    text-align: center;
+    border: 0;
+    cursor: default;
+    font-size: 25px;
+    padding: 5px 0;
+    border-radius: 5px;
+    margin: 0 5px;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    &.edit{
+      border: 1px solid #ccc;
+
+      &:focus{
+        outline: none;
+        box-shadow: 0 0 3px 0px rgb(101, 110, 224);
+      }
+    }
+
+    &.error{
+      color: red;
+    }
+  }
+}
+
+.step-container{
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  height: 100px;
+  width: 100px;
+  text-align: center;
+  padding-top: 5px;
+  font-size: 0;
+  line-height: 0;
+  opacity: 0;
+  visibility: hidden;
+
+  &:after{
+    content: '';
+    display: block;
+    position: relative;
+    margin-top: 15px;
+    left: 0;
+    border-radius: 50%;
+    width: 100%;
+    height: 100px;
+    border: 1px dashed red;
+  }
+
+  &.first-step-container{
+    margin-left: 35px;
+    width: 275px;
+    height: 135px;
+
+    &:after{
+      height: 200px;
+    }
+  }
+
+  &.second-step-container{
+    width: 155px;
+  }
+
+  .term{
+    width: 30px;
+    text-align: center;
+    border: 1px solid #ccc;
+    cursor: default;
+    padding: 5px 0;
+    border-radius: 5px;
+    margin: 0 5px;
+    font-size: 25px;
+
+    &:focus{
+      outline: none;
+      box-shadow: 0 0 3px 0px rgb(101, 110, 224);
+    }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+  
+  &.active{
+    opacity: 1;
+    visibility: visible;
+  }
+}
